@@ -1,0 +1,159 @@
+:root{
+    --azul-oscuro: #071739;
+    --azul-medio: #4b6382;
+    --azul-claro: #A4B5C4;
+    --gris-azulado: #CDD5DB;
+    --beige: #A68868;
+    --crema: #E3C39d;
+
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--gris-azulado);
+    color: var(--azul-oscuro);
+}
+
+header{
+    background-image:url(fondo.avif);
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.menu a {
+    color:var(--crema);
+    text-decoration: none;
+    font-weight: bold;    
+}
+
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hero-media,
+.hero-text{
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 1rem;
+
+}
+
+.hero-text h1{
+    font-size: 2rem;
+    color: var(--crema);
+    text-shadow:var(--azul-oscuro) 2px 2px 4px;
+}
+
+.hero-text button{
+    background-color: var(--beige);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+main{
+    padding: 2rem;
+    background-color: var(--azul-claro);
+}
+
+h2{
+    text-align: center;
+    color: var(--azul-oscuro);
+}
+
+.services{
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));*/
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.service{
+   background-color: var(--azul-medio);
+   color: white;
+   padding: 1rem;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.response{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+ .yes{
+    background-color: var(--azul-medio);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+ }
+
+ .no{
+    background-color:var(--beige);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+ }
+
+.content-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.text,
+.media{
+    display: flex;
+    justify-content: center;
+}
+
+.text button{
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    margin-top: 1rem;
+    border-radius: 8px;   
+}
+
+.extras{
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--azul-oscuro);
+}
+
+footer{
+    background-color: var(--azul-medio);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+

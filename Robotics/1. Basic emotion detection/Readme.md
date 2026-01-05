@@ -94,7 +94,7 @@ robot-social-basico/
 ├── emotions.py        # (opcional) lógica de detección emocional
 ├── responses.py       # (opcional) respuestas del robot
 └── README.md
-
+```
 ---
 
 ## 7. Correcciones aplicadas al código

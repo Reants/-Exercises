@@ -94,3 +94,63 @@ robot-social-basico/
 ├── emotions.py        # (opcional) lógica de detección emocional
 ├── responses.py       # (opcional) respuestas del robot
 └── README.md
+
+---
+
+## 7. Correcciones aplicadas al código
+
+Las siguientes mejoras fueron realizadas durante la revisión final del proyecto:
+
+| Área | Corrección aplicada |
+|----|---------------------|
+| Ejecución del programa | Llamada correcta a la función `main()` |
+| Lógica de detección | Eliminación del uso de índices para comparar emociones |
+| Detección emocional | Comparación directa de palabras del usuario con listas emocionales |
+| Operadores lógicos | Uso correcto del operador `and` en condiciones |
+| Variables | Evitar sobrescribir funciones nativas como `input` |
+| Normalización de texto | Conversión del texto del usuario a minúsculas |
+| Ortografía | Corrección de palabras clave emocionales (ej. `irritado`) |
+
+---
+
+## 8. Estado del proyecto
+
+| Ítem evaluado | Estado |
+|-------------|--------|
+| Ejecución sin errores | ✅ |
+| Detección emocional básica | ✅ |
+| Flujo humano–robot (HRI) | ✅ |
+| Buenas prácticas (nivel Junior) | ✅ |
+| Documentación (README) | ✅ |
+| Entrega del proyecto | ✅ Proyecto completado |
+
+---
+
+## 9. Retos opcionales (Bonus 🚀)
+
+Para continuar mejorando este proyecto, se proponen los siguientes retos:
+
+- Implementar **memoria emocional básica** (recordar la última emoción detectada)
+- Detectar **múltiples emociones** en una sola frase
+- Ajustar el saludo del robot según interacciones previas
+- Usar valores booleanos (`True / False`) en lugar de `1 / 0`
+- Separar completamente la lógica en módulos (`emotions.py`, `responses.py`)
+- Contar el número de interacciones realizadas
+
+---
+
+## 10. Conclusión
+
+Este proyecto representa un **primer acercamiento sólido a la robótica social**, aplicando:
+
+- Lógica básica para detección emocional
+- Interacción humano–robot mediante texto
+- Respuestas empáticas simuladas
+- Código claro, funcional y mantenible
+
+El sistema desarrollado sirve como **base para proyectos más avanzados**, como:
+- Robots con memoria emocional
+- Integración con sensores o reconocimiento de voz
+- Sistemas de detección emocional más complejos
+
+Este trabajo cumple correctamente los objetivos propuestos para un **nivel Junior**.

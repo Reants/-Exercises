@@ -1,62 +1,152 @@
-# 🤖 Ejercicio 2: Robot social con estado emocional persistente
+# 🤖 Robot Social con Estado Emocional Persistente (Python)
 
-## 📌 Título del ejercicio
-Simulación de un robot social con estado emocional
+## 1. Descripción del ejercicio
+En este proyecto se desarrolla un **simulador de robot social** que interactúa con una persona mediante texto y es capaz de **mantener un estado emocional persistente** a lo largo de la conversación.
 
-## 🎯 Objetivo
-Aprender a:
-- Manejar **estados internos** en un robot simulado
-- Mantener una **emoción activa** en el tiempo
-- Cambiar el comportamiento del robot según su emoción actual
-- Reforzar lógica condicional y funciones en Python
+El robot:
+- Recibe frases escritas por el usuario
+- Detecta emociones básicas mediante palabras clave
+- Mantiene la última emoción detectada como estado interno
+- Responde de forma empática según su estado emocional actual
 
-## 🧰 Tecnologías usadas
-- Python 3
-- Consola / terminal
+Este ejercicio **no utiliza inteligencia artificial avanzada**, sino **lógica básica en Python**, simulando cómo un robot social puede empezar a interpretar emociones humanas y recordarlas.
 
-## 📚 Conceptos que se practican
-- Variables de estado
-- Condicionales (`if / elif / else`)
-- Funciones
-- Entrada del usuario (`input`)
-- Lógica de comportamiento
-- Simulación de emociones simples
+---
 
-## 📝 Instrucciones paso a paso
+## 2. Objetivo de aprendizaje
+Al finalizar este ejercicio serás capaz de:
 
-1. Crea un archivo llamado `robot_emocional.py`
-2. Define una variable llamada `emocion_actual`
-   - Su valor inicial debe ser `"neutral"`
-3. Crea una función llamada `detectar_emocion(mensaje)`
-   - Recibe un texto
-   - Devuelve una emoción según palabras clave:
-     - `"feliz"` si el mensaje contiene palabras positivas
-     - `"triste"` si contiene palabras negativas
-     - `"neutral"` si no detecta nada
-4. Crea una función llamada `responder_robot()`
-   - Usa la variable `emocion_actual`
-   - Imprime una respuesta distinta según la emoción:
-     - feliz → mensaje alegre
-     - triste → mensaje empático
-     - neutral → mensaje neutro
-5. En un bucle:
-   - Pide al usuario que escriba un mensaje
-   - Actualiza `emocion_actual` usando `detectar_emocion`
-   - Llama a `responder_robot`
-6. El programa solo termina si el usuario escribe `"salir"`
+- Aplicar **lógica condicional** para detección emocional
+- Procesar texto ingresado por el usuario
+- Mantener un **estado interno persistente**
+- Separar responsabilidades mediante funciones
+- Simular una interacción básica de **Human–Robot Interaction (HRI)**
+- Escribir código claro, legible y estructurado (nivel Junior)
 
-## 📦 Qué debo entregar
-- Archivo `robot_emocional.py`
-- El código debe ejecutarse sin errores
-- El robot debe **recordar su emoción** entre mensajes
+---
 
-## ✅ Criterios de evaluación (nivel junior)
-- El programa corre correctamente
-- Uso correcto de condicionales
-- La emoción se guarda y se reutiliza
-- El código es legible y ordenado
-- Uso correcto de funciones
+## 3. Tecnologías usadas
+- Python 3.x
+- Consola / Terminal
 
-## 🚀 Reto opcional (muy simple)
-- Agrega una emoción extra (`"enojado"` o `"sorprendido"`)
-- Cambia la respuesta del robot según esa emoción
+---
+
+## 4. Requisitos previos
+- Conocimientos básicos de Python:
+  - Variables
+  - Listas
+  - Condicionales (`if / elif / else`)
+  - Funciones
+  - Bucles (`while`)
+
+> No se utilizan librerías externas.
+
+---
+
+## 5. Instrucciones paso a paso
+
+### 🧩 Etapa 1: Preparar el entorno
+1. Crear una carpeta para el proyecto
+2. Crear un archivo principal en Python (`main.py`)
+3. Ejecutar el archivo desde la terminal con Python 3
+
+---
+
+### 🧠 Etapa 2: Entrada del usuario
+- Solicitar al usuario que escriba cómo se siente
+- Convertir el texto a minúsculas para facilitar la comparación
+- Mantener el programa en ejecución hasta que el usuario escriba `"salir"`
+
+---
+
+### 😊 Etapa 3: Detección emocional
+- Definir listas de palabras clave para cada emoción:
+  - Felicidad
+  - Tristeza
+  - Enojo
+- Dividir el texto del usuario en palabras
+- Comparar cada palabra con las listas emocionales
+- Retornar la emoción detectada o `"neutro"` si no se detecta ninguna
+
+---
+
+### 🤖 Etapa 4: Estado emocional persistente
+- Inicializar el estado emocional del robot como `"neutro"`
+- Actualizar el estado **solo cuando se detecte una emoción**
+- Mantener la emoción anterior si no se detecta una nueva
+
+---
+
+### 🔁 Etapa 5: Respuesta del robot
+- Generar una respuesta empática según el estado emocional actual
+- El robot responde incluso si la emoción fue detectada en una interacción anterior
+
+---
+
+## 6. Estructura del proyecto
+
+```text
+social-robot-persistent-emotion/
+│
+├── main.py
+└── README.md
+``` 
+---
+
+## 7. Revisión del código (errores y mejoras)
+
+| Área              | Observación                             | Explicación                               | Mejora sugerida                      |
+| ----------------- | --------------------------------------- | ----------------------------------------- | ------------------------------------ |
+| Manejo de errores | Uso de `try/except ValueError`          | No se realizan conversiones numéricas     | Eliminar el bloque `try/except`      |
+| Flujo de salida   | El robot responde al escribir `"salir"` | La condición de salida se evalúa al final | Validar `"salir"` antes de responder |
+| Estado neutro     | No hay respuesta para estado `"neutro"` | El usuario no recibe feedback inicial     | Agregar respuesta neutral            |
+| Normalización     | No se manejan acentos                   | Palabras como `"felíz"` no se detectan    | Ampliar listas o normalizar texto    |
+
+---
+## 8. Estado del proyecto
+
+| Ítem evaluado                | Estado                |
+| ---------------------------- | --------------------- |
+| Ejecución sin errores        | ✅                     |
+| Detección emocional          | ✅                     |
+| Estado emocional persistente | ✅                     |
+| Interacción HRI básica       | ✅                     |
+| Buenas prácticas (Junior)    | ✅                     |
+| Documentación                | ✅ Proyecto completado |
+
+---
+
+## 9 Retos opcionales (Bonus 🚀)
+
+### Agregar una respuesta cuando el estado sea "neutro"
+
+### Implementar transición emocional gradual (ej. triste → neutro → feliz)
+
+### Contar el número de interacciones realizadas
+
+### Separar el código en módulos (emotions.py, responses.py)
+
+### Permitir detectar más de una emoción por frase
+---
+## 10. Conclusión
+Este proyecto representa un avance sólido en Robótica Social, introduciendo el concepto de memoria emocional, fundamental para sistemas de interacción humano–robot.
+
+El ejercicio refuerza:
+
+### Lógica de programación
+
+### Manejo de estado interno
+
+### Diseño claro de funciones
+
+### Respuestas empáticas simuladas
+
+Este sistema sirve como base directa para futuros desarrollos como:
+
+### Robots con personalidad
+
+### Estados emocionales complejos
+
+### Simulación de comportamiento social más realista
+
+✅ Objetivos cumplidos para un nivel Junior.
